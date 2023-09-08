@@ -83,7 +83,7 @@ class TestSum(unittest.TestCase):
         m(0).SET("SET_KEY2", 2)
 
         self.assertEqual(m(0).KEYS().value, ['KEY1', 'SET_KEY2'])
-        self.assertEqual(m(0).KEYS("S").valuepython , ['SET_KEY2'])
+        self.assertEqual(m(0).KEYS("S").value, ['SET_KEY2'])
         del m
 
     def test_POP(self):
