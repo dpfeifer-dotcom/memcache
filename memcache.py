@@ -29,13 +29,13 @@ class MemCache:
 def create():
     return MemCache()
 
+if __name__ == "__main__":
+    a = create().with_server(6000)
+    for i in range(10):
+        a(0).SET('ASD'+str(i), "asdasdasasdasdasdasdasdasdasdsadasdasdasdasd")
+        a(0).SET('BSD' + str(i), "asdasdasasdasdasdasdasdasdasdsadasdasdasdasd")
+    print('START', a(0).KEYS(start='A').value)
 
-a = create().with_server(6000)
-for i in range(10):
-    a(0).SET('ASD'+str(i), "asdasdasasdasdasdasdasdasdasdsadasdasdasdasd")
-    a(0).SET('BSD' + str(i), "asdasdasasdasdasdasdasdasdasdsadasdasdasdasd")
-print('START', a(0).KEYS(start='A').value)
 
-
-while True:
-    time.sleep(1)
+    while True:
+        time.sleep(1)
