@@ -9,7 +9,6 @@ class MemCache:
         self.__storages_instance = storages_instance
         self.__storages:  list[Storage] = []
         self.__server: Server or None = None
-
         for i in range(self.__storages_instance):
             self.__storages.append(Storage(index=i))
     
