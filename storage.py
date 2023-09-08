@@ -18,7 +18,6 @@ class Storage:
         item = Item(value, expiration)
         with self.__storage_lock:
             self.__items[key] = item
-        print(t.elaped_time())
         return CachedItem()
 
     def DEL(self, key: str):
