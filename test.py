@@ -89,7 +89,7 @@ class TestSum(unittest.TestCase):
     def test_POP(self):
         m = MemCache()
         m(0).SET("KEY", 1)
-        self.assertEqual(m(0).POP("KEY1").value, 1)
+        self.assertEqual(m(0).POP("KEY").value, 1)
         self.assertEqual(m(0).GET("KEY").value, None)
         del m
 
